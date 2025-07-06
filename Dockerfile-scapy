@@ -1,0 +1,16 @@
+# Dockerfile-scapy
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y \
+    tcpdump \
+    iproute2 \
+    iputils-ping \
+    iptables \
+    net-tools \
+    && pip install --no-cache-dir scapy \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /scripts
+
+ENTRYPOINT ["python3"]
