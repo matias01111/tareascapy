@@ -2,7 +2,7 @@
 
 ## Contenido
 - `Dockerfile-scapy`: Dockerfile para construir la imagen con Scapy y herramientas de red.
-- `scripts/modificar_paquete.py`: Script principal para interceptar y modificar paquetes MySQL en tiempo real.
+- `scripts/modificador.py`: Script principal para interceptar y modificar paquetes MySQL en tiempo real.
 - `scripts/fuzzing1.py`: Script que envía un paquete TCP con flag RST para fuzzing.
 - `scripts/fuzzing2.py`: Script que envía un payload personalizado con TCP PA para fuzzing.
 - `docker_commands.sh`: Comandos para crear y ejecutar contenedores Docker para servidor MySQL, cliente y atacante con Scapy.
@@ -51,7 +51,7 @@ python3 /scripts/fuzzing2.py
 ```
 
 Notas adicionales
-La interfaz usada en modificar_paquete.py está configurada para br-dfeb538b2e43. Cambiarla si su entorno usa una distinta.
+La interfaz usada en modificador.py está configurada para br-dfeb538b2e43. Cambiarla si su entorno usa una distinta.
 
 Las direcciones IP y puertos están definidos para los contenedores en la red Docker. Ajustar si cambia la configuración.
 
